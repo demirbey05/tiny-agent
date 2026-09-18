@@ -3,6 +3,21 @@ revision = 3
 requires-python = ">=3.13"
 
 [[package]]
+name = "illustrated-agents"
+version = "0.1.1"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/df/ec/e9166d4f5a581a11b03eb7714a874ef384ec407eba0f204e57e26df2c7b1/illustrated_agents-0.1.1.tar.gz", hash = "sha256:f0436521cb79055e2c47cdf55622b5d9fb4d975947c167536fb5d213f73f1594", size = 40359, upload-time = "2026-08-30T06:38:48.844Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/0e/00/86fa522e442fcfac4e2696da643a047abfec44e22ebcae4287775b85224e/illustrated_agents-0.1.1-py3-none-any.whl", hash = "sha256:9b018222b6747eee5ed994e9f9525d9c925fb0f88ec7019624e5f8f02021fc6b", size = 48744, upload-time = "2026-08-30T06:38:47.939Z" },
+]
+
+[[package]]
 name = "tiny-agent"
 version = "0.1.0"
 source = { virtual = "." }
+dependencies = [
+    { name = "illustrated-agents" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "illustrated-agents", specifier = ">=0.1.1" }]
